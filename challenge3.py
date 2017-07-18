@@ -30,8 +30,8 @@ while deck: #Loop till there are cards remaining in the deck
     game.append(pick)          
     deck.remove(pick)
     if pick == 'B':currentCash+=1 #If the card is black you get a dollar
-    else:currentCash+=-1            #If teh card is red you lose a dollar
-    blackEV = (deck.count('B')/float(len(deck))*blackCost) if  deck.count('B')!=0 else 0 #The Eepected value of the game based on remaining black cards
+    else:currentCash+=-1            #If the card is red you lose a dollar
+    blackEV = (deck.count('B')/float(len(deck))*blackCost) if  deck.count('B')!=0 else 0 #The Expected value of the game based on remaining black cards
     redEV = (deck.count('R')/float(len(deck))*redCost) if deck.count('R')!=0 else 0 #The expected value of the game based on remaining red cards
     EV = blackEV + redEV #The total expected value of the game 
      
