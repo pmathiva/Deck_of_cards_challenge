@@ -17,8 +17,8 @@ while not int(Black) in range(0,27):
     
 
 Red = X-Black #Calculate the number of Red cards in hand 
-RedCost = -1 #You get a dollar for picking a Black card
-BlackCost = +1 #You lose a dollar for picking a Red card
+RedCost = -1 #You lose a dollar for picking a Red card
+BlackCost = +1 #You win a dollar for picking a Black card
 
 #Calculate number of cards remaining
 RemainingRed = 26 - Red
