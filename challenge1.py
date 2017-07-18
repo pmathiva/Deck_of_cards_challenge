@@ -13,8 +13,8 @@ import numpy as np
 import matplotlib as plt 
 
 def ExpectedValue():
-    red = 2
-    black = 2
+    red = 52
+    black = 52
     table = []
 
     for i in reversed(range(red+1)):
@@ -31,12 +31,5 @@ def ExpectedValue():
     df = pandas.DataFrame(table).transpose()
     
     print df
-    mask = np.zeros_like(df)
-    mask[np.triu_indices_from(mask)] = True
-
-    fig = plt.figure(figsize=(8,8))
-    plt.subplot2grid((1,1), (0,0))
-    with sns.axes_style("white"):
-        ax = sns.heatmap(df, mask=mask, vmax=.9, square=True, annot=False)
-
+    
 ExpectedValue() # Prints the matrix of expected value of the deck of cards
